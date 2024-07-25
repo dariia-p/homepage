@@ -6,8 +6,8 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
+  line-height: 1.75; /* Increased line-height */
   background-color: #f4f4f9;
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
@@ -73,6 +73,7 @@ body {
 .contact-info__header,
 .contact-info__sub-header {
   text-align: center;
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .contact-info__header {
@@ -168,11 +169,13 @@ body {
   text-align: center;
   margin-bottom: 15px;
   font-size: 1.5rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .skills__text {
   color: var(--secondary-text-color);
   text-align: justify;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 /* Experience and additional info styles */
@@ -186,6 +189,7 @@ body {
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .experiences__company-header-durability {
@@ -193,6 +197,7 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 1rem;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 .experiences__company-header-name {
@@ -202,13 +207,14 @@ body {
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.2rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .experiences__company-project {
   margin-left: 15px;
   margin-bottom: 25px;
   padding-bottom: 25px;
-
+  border-bottom: 1px solid #e0e0e0;  /* Added border to divide project types */
 }
 
 .experiences__company-project-role {
@@ -216,6 +222,7 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 1rem;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 .experiences__company-project-name {
@@ -223,7 +230,7 @@ body {
   text-align: left;
   margin-bottom: 10px;
   font-size: 1.2rem;  /* Increased font size */
-
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .experiences__company-project-responsibilities {
@@ -231,7 +238,7 @@ body {
   padding-left: 20px;
   margin-bottom: 15px;  /* Added margin for spacing */
   border-bottom: 3px solid #0094deca;  /* Added border to divide project types */
-
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 .additional-info {
@@ -243,28 +250,32 @@ body {
 }
 
 .additional-info__education-header {
-  color: var (--secondary-text-color);
+  color: var(--secondary-text-color);
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .additional-info__education-university-durability {
-  color: var (--durability-text-color);
+  color: var(--durability-text-color);
   text-align: left;
   margin-bottom: 10px;
   font-size: 1rem;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 .additional-info__education-university-speciality {
-  color: var (--primary-text-color);
+  color: var(--primary-text-color);
   text-align: left;
   margin-bottom: 10px;
   font-size: 1.2rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .additional-info__education-university-name {
-  color: var (--secondary-text-color);
+  color: var(--secondary-text-color);
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
 
 .additional-info__languages {
@@ -272,13 +283,15 @@ body {
 }
 
 .additional-info__languages-header {
-  color: var (--secondary-text-color);
+  color: var(--secondary-text-color);
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
+  font-family: 'Merriweather', serif; /* Updated font */
 }
 
 .additional-info__languages-item {
-  color: var (--secondary-text-color);
+  color: var(--secondary-text-color);
   margin-bottom: 10px;
+  font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
 }
