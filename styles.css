@@ -8,13 +8,15 @@
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
   line-height: 1.75; /* Increased line-height */
-  background-color: #f4f4f9;
+  background-color: #f9f9f9; /* Updated background color */
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
   --icon-color: #6a737d;
   --border-color: #0094deca;
   --text-decoration-color: #0094de;
+  --header-color: #004085; /* New header color */
+  --link-color: #0056b3; /* New link color */
 }
 
 .container {
@@ -39,15 +41,16 @@ body {
   margin: 50px auto;
   border: 1px solid #e0e0e0;
   box-shadow: 1px 1px 10px 2px #e0e0e0;
-  padding: 30px 0;
+  padding: 30px;
   max-width: 900px;
   background-color: #ffffff;
 }
 
 .resume__block {
   border-bottom: 3px solid var(--border-color);
-  padding-bottom: 30px;
+  padding: 30px;
   margin-bottom: 50px; /* Increased margin for more space between blocks */
+  background-color: rgba(240, 248, 255, 0.5); /* Added subtle background color */
 }
 
 @media screen and (max-width: 576px) {
@@ -74,10 +77,10 @@ body {
 .contact-info__sub-header {
   text-align: center;
   font-family: 'Merriweather', serif; /* Updated font */
+  color: var(--header-color); /* Updated header color */
 }
 
 .contact-info__header {
-  color: var(--primary-text-color);
   margin-bottom: 15px;
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
@@ -85,7 +88,6 @@ body {
 }
 
 .contact-info__sub-header {
-  color: var(--secondary-text-color);
   margin-bottom: 30px;
   font-size: 1.5rem;  /* Increased font size */
 }
@@ -165,7 +167,7 @@ body {
 }
 
 .skills__header {
-  color: var(--secondary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: center;
   margin-bottom: 15px;
   font-size: 1.5rem;  /* Increased font size */
@@ -185,7 +187,7 @@ body {
 }
 
 .experiences__header {
-  color: var(--secondary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
@@ -201,7 +203,7 @@ body {
 }
 
 .experiences__company-header-name {
-  color: var(--primary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-decoration-color: var(--text-decoration-color);
   text-decoration-line: underline;
   text-align: left;
@@ -214,7 +216,6 @@ body {
   margin-left: 15px;
   margin-bottom: 25px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #e0e0e0;  /* Added border to divide project types */
 }
 
 .experiences__company-project-role {
@@ -226,7 +227,7 @@ body {
 }
 
 .experiences__company-project-name {
-  color: var(--primary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: left;
   margin-bottom: 10px;
   font-size: 1.2rem;  /* Increased font size */
@@ -250,7 +251,7 @@ body {
 }
 
 .additional-info__education-header {
-  color: var(--secondary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
@@ -266,7 +267,7 @@ body {
 }
 
 .additional-info__education-university-speciality {
-  color: var(--primary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: left;
   margin-bottom: 10px;
   font-size: 1.2rem;  /* Increased font size */
@@ -283,7 +284,7 @@ body {
 }
 
 .additional-info__languages-header {
-  color: var(--secondary-text-color);
+  color: var(--header-color); /* Updated header color */
   text-align: left;
   margin-bottom: 20px;
   font-size: 1.5rem;  /* Increased font size */
@@ -294,4 +295,14 @@ body {
   color: var(--secondary-text-color);
   margin-bottom: 10px;
   font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
+}
+
+/* Link styles */
+a {
+  color: var(--link-color); /* Updated link color */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
