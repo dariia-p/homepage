@@ -3,12 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for theme change */
 }
 
 body {
   font-family: 'Lato', Arial, Helvetica, sans-serif; /* Updated font */
   line-height: 1.75; /* Increased line-height */
   background-color: #f9f9f9; /* Updated background color */
+  color: var(--primary-text-color); /* Set text color */
   --primary-text-color: #181820;
   --secondary-text-color: #5c5c62;
   --durability-text-color: #6a737d9c;
@@ -17,6 +19,23 @@ body {
   --text-decoration-color: #0094de;
   --header-color: #004085; /* New header color */
   --link-color: #0056b3; /* New link color */
+  --background-color: #ffffff; /* Light background color */
+}
+
+body.dark-mode {
+  --primary-text-color: #e0e0e0;
+  --secondary-text-color: #c5c5c5;
+  --durability-text-color: #a1a1a1;
+  --icon-color: #c5c5c5;
+  --border-color: #0056b3;
+  --text-decoration-color: #0056b3;
+  --header-color: #0094de;
+  --link-color: #0094de;
+  --background-color: #181820;
+}
+
+body {
+  background-color: var(--background-color);
 }
 
 .container {
@@ -50,7 +69,17 @@ body {
   border-bottom: 3px solid var(--border-color);
   padding: 30px;
   margin-bottom: 50px; /* Increased margin for more space between blocks */
-  background-color: rgba(240, 248, 255, 0.5); /* Added subtle background color */
+  background-color: rgba(240, 248, 255, 0.5); /* Added subtle background color with opacity */
+}
+
+body.dark-mode .resume {
+  border: 1px solid #0056b3;
+  box-shadow: 1px 1px 10px 2px #0056b3;
+  background-color: #181820;
+}
+
+body.dark-mode .resume__block {
+  background-color: rgba(24, 24, 32, 0.5);
 }
 
 @media screen and (max-width: 576px) {
@@ -107,10 +136,15 @@ body {
   text-decoration: none;
   display: flex;
   justify-content: start;
+  transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 .contact-info__item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.contact-info__item:hover {
+  color: var(--link-color); /* Change color on hover */
 }
 
 .contact-info__item-icon-wrapper {
@@ -216,6 +250,7 @@ body {
   margin-left: 15px;
   margin-bottom: 25px;
   padding-bottom: 25px;
+  border-bottom: 1px solid #e0e0e0;  /* Added border to divide project types */
 }
 
 .experiences__company-project-role {
@@ -301,8 +336,96 @@ body {
 a {
   color: var(--link-color); /* Updated link color */
   text-decoration: none;
+  transition: color 0.3s, text-decoration 0.3s; /* Smooth transition for hover effect */
 }
 
 a:hover {
+  color: var(--header-color); /* Change color on hover */
   text-decoration: underline;
+}
+
+/* Toggle switch styles */
+.theme-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 120px; 
+  height: 68px; 
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 52px; 
+  width: 52px; 
+  left: 8px; 
+  bottom: 8px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(52px); 
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  transition: opacity 0.4s;
+  font-size: 24px; 
+}
+
+.sun {
+  left: 20px; 
+  opacity: 1;
+}
+
+.moon {
+  right: 20px; 
+  opacity: 0;
+}
+
+input:checked ~ .sun {
+  opacity: 0;
+}
+
+input:checked ~ .moon {
+  opacity: 1;
 }
